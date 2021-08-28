@@ -28,5 +28,5 @@ int main(){
   cin>>key;
   cout<<"Required digit's index is "<<binarySearch(array,n,key)<<endl;
 
-  return 0;
+  return 1;
 }
