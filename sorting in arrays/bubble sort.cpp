@@ -35,7 +35,6 @@ int main(){
 """""""""" OR """"""""""
 
 
-
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -48,9 +47,11 @@ int main() {
         }
         
         for(int i=1;i<n;i++){
+          bool swapped=true;  // for best case (time complexity becomes O(n) from O(n^2)
           for(int j=0;j<n-i;j++){
-            if (arr[j]>arr[j+1]) swap(arr[j],arr[j+1]);;
+            if (arr[j]>arr[j+1]){ swap(arr[j],arr[j+1]); swapped=false; }
           }
+          if(swapped==true) break;
         }
     
         for(int i=0;i<n;i++){
